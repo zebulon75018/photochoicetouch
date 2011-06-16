@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.orderImageOnCd"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="511" d:DesignWidth="822" xmlns:my="http://schemas.microsoft.com/surface/2008">
+    <Grid Height="386" Width="669" Name="gridBackground">
+        <Label Content="{Loc OrderPictureCD}" Height="46" HorizontalAlignment="Left" Margin="33,12,0,0" Name="label1" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Width="372" />
+        <StackPanel Name="panelCheckPhotoOnCD" Height="224" Orientation="Vertical" HorizontalAlignment="Left" Margin="61,104,0,0"  VerticalAlignment="Top" Width="551" >
+        <my:SurfaceCheckBox  Content="{Loc AllPhotoOnCD}" Height="16" HorizontalAlignment="Left" Margin="79,5,0,0" Name="surfaceCheckBoxAllOnCD" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Checked="surfaceCheckBoxAllOnCD_Checked" />
+         <my:SurfaceCheckBox Content="{Loc NoPhotoOnCD}" Height="16" HorizontalAlignment="Left" Margin="79,40,0,0" Name="surfaceCheckBoxNoPictureOnCD" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Checked="surfaceCheckBoxNoPictureOnCD_Checked" />
+            <my:SurfaceCheckBox Content="{Loc OnlyOnCD}" Height="16" HorizontalAlignment="Left" Margin="79,40,0,0" Name="surfaceCheckBoxWithoutPaper" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Checked="surfaceCheckBoxWithoutPaper_Checked" Unchecked="surfaceCheckBoxWithoutPaper_Unchecked" />            
+        </StackPanel>
+        <my:SurfaceButton Content="Ok" Height="40" HorizontalAlignment="Left" Margin="123,334,0,0" Name="surfaceButtonOk" VerticalAlignment="Top" Width="124" FontSize="24" FontWeight="Bold" Click="surfaceButtonOk_Click" />
+        <my:SurfaceButton Content="{Loc Cancel}" Height="40" HorizontalAlignment="Left" Margin="423,334,0,0" Name="surfaceButtonCancel" VerticalAlignment="Top" Width="124" FontSize="24" FontWeight="Bold" Click="surfaceButtonCancel_Click" />
+        <Label Content="{Loc MinimumPhotoOnCD}" Height="42" HorizontalAlignment="Left" Margin="106,56,0,0" Name="labelWarningMinimun" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="#FF961515" Width="466"  Visibility="Hidden"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,102 @@
+﻿<s:SurfaceWindow x:Class="SurfaceApplicationMaurice.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:r="clr-namespace:SurfaceApplicationMaurice"
+    Title="SurfaceApplicationMaurice" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="1460" d:DesignWidth="3276" SizeToContent="WidthAndHeight" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="False" WindowStartupLocation="CenterScreen">
+        
+    <s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="1" />
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="42" />
+            <Setter Property="Foreground" Value="White" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" 
+              CornerRadius="25" 
+              BorderThickness="4"               
+              RenderTransformOrigin="0.5,0.5">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/SurfaceApplicationMaurice;component/Images/boutongris.png" />
+                            </Border.Background>
+                            <ContentPresenter x:Name="ButtonContentPresenter"
+                            VerticalAlignment="Center"  
+                            HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" >
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/SurfaceApplicationMaurice;component/Images/boutongris.png" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </s:SurfaceWindow.Resources>
+
+    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="1100" Width="1920" Name="gridBackground" Background="{x:Null}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1919*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Height="600" HorizontalAlignment="Left"  Name="viewbox4" VerticalAlignment="Top" Width="600"   Margin="300,100,0,0" TouchEnter="viewbox4_TouchEnter" TouchLeave="viewbox4_TouchLeave" Grid.Column="1" Stretch="Fill">
+            <r:ButtonMenu VerticalAlignment="Stretch" x:Name="info" MouseUp="info_MouseUp" HorizontalAlignment="Stretch"  />
+        </Viewbox>
+        <Viewbox Height="600" HorizontalAlignment="Left"  Name="viewbox5" VerticalAlignment="Top" Width="600"   Margin="638,-5,0,0" Visibility="Hidden" Grid.Column="1">
+            <r:ButtonMenu x:Name="MeteoButton" MouseDown="MeteoButton_MouseDown" MouseDoubleClick="MeteoButton_MouseDoubleClick" TouchUp="MeteoButton_TouchUp" Visibility="Hidden" />
+        </Viewbox>
+        <Viewbox Height="600" HorizontalAlignment="Left"  Name="viewbox6" VerticalAlignment="Top" Width="600"   Margin="1050,100,0,0" TouchEnter="viewbox4_TouchEnter" TouchLeave="viewbox4_TouchLeave" Grid.Column="1" Stretch="Fill">
+            <r:ButtonMenu    MouseDoubleClick="PhotoPage_MouseDoubleClick" x:Name="PhotoButton" TouchUp="PhotoButton_TouchUp"  />
+        </Viewbox>
+        <Viewbox Height="600" HorizontalAlignment="Left"  Name="viewbox7" VerticalAlignment="Top" Width="600"    Margin="1231,200,0,0" TouchEnter="viewbox4_TouchEnter" TouchLeave="viewbox4_TouchLeave" Grid.Column="1">
+            <r:ButtonMenu  x:Name="languageButton" TouchUp="languageButton_TouchUp" MouseDoubleClick="languageButton_MouseDoubleClick" Visibility="Hidden" />
+        </Viewbox>
+
+        <Image Grid.Column="1" Height="133" HorizontalAlignment="Left" Margin="380,767,0,0" Name="imageFrench" Stretch="Fill" VerticalAlignment="Top" Width="139" Source="/SurfaceApplicationMaurice;component/Resources/francais.png" MouseUp="imageFrench_MouseUp" TouchUp="imageFrench_TouchUp" />
+        <Image Grid.Column="1" Height="151" HorizontalAlignment="Left" Margin="563,764,0,0" Name="imageEnglish" Stretch="Fill" VerticalAlignment="Top" Width="156" Source="/SurfaceApplicationMaurice;component/Resources/anglais.png" TouchUp="imageEnglish_TouchUp" MouseUp="imageEnglish_MouseUp" />
+        <Image Grid.Column="1" Height="151" HorizontalAlignment="Left" Margin="938,764,0,0" Name="imageItalian" Source="/SurfaceApplicationMaurice;component/Resources/italien.png" Stretch="Fill" VerticalAlignment="Top" Width="155" TouchUp="imageItalian_TouchUp" MouseUp="imageItalian_MouseUp" />
+        <Image Grid.Column="1" Height="133" HorizontalAlignment="Left" Margin="754,768,0,0" Name="imageDeutch" Source="/SurfaceApplicationMaurice;component/Resources/allemand.png" Stretch="Fill" VerticalAlignment="Top" Width="139" TouchUp="imageDeutch_TouchUp" MouseUp="imageDeutch_MouseUp" />
+        <Image Grid.Column="1" Height="147" HorizontalAlignment="Left" Margin="1138,768,0,0" Name="imageSpanish" Source="/SurfaceApplicationMaurice;component/Images/espagne.png" Stretch="Fill" VerticalAlignment="Top" Width="145" TouchUp="imageSpanish_TouchUp" MouseUp="imageSpanish_MouseUp" />
+        <Image Grid.Column="1" Height="147" HorizontalAlignment="Left" Margin="1335,768,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="145" Source="/SurfaceApplicationMaurice;component/Images/russe%20%281%29.png" MouseUp="image2_MouseUp" />
+        <Image Grid.Column="1" Height="639" HorizontalAlignment="Left" Margin="487,67,0,0" Name="imageBackground" Stretch="Fill" VerticalAlignment="Top" Width="1267"  Visibility="Hidden"/>
+         
+
+        <Grid Height="766" HorizontalAlignment="Left" Margin="2010,78,0,0" Name="grid1" VerticalAlignment="Top" Width="692"  Grid.Column="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="#FF707070" Offset="0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <DockPanel  HorizontalAlignment="Stretch"  Name="dockPanel1" VerticalAlignment="Stretch">
+                <Canvas HorizontalAlignment="Stretch"  Name="stackPanel1" VerticalAlignment="Stretch"  DockPanel.Dock="Top" Height="72" >
+                    <Button Content="{Loc Disconnect}" Height="70" HorizontalAlignment="Right"  Width="218"  Name="buttonDisconnect"  VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Visibility="Hidden" Click="buttonDisconnect_Click" Canvas.Right="805">
+                        <Button.Background>
+                            <ImageBrush />
+                        </Button.Background>
+                    </Button>
+                    <Button Content="{Loc AccessSelection}" Height="70" HorizontalAlignment="Right"  Width="300"  Name="buttonLogin"  VerticalAlignment="Top" Click="buttonLogin_Click" FontSize="20" FontWeight="Bold" Canvas.Right="165">                        
+                    </Button>
+                    <Button Content="{Loc Back}" Height="70" HorizontalAlignment="Right" Name="buttonBackInfo" VerticalAlignment="Top" Width="132" Click="button1_Click" FontSize="20" FontWeight="Bold" Canvas.Right="20" />
+                    <Button Content="{Loc Home}" Height="70" HorizontalAlignment="Right" Name="buttonHomeCategory" VerticalAlignment="Top" Width="250"  FontSize="20" FontWeight="Bold" Canvas.Right="500" Click="buttonHomeCategory_Click" />                    
+                    <TextBlock FontSize="32" Foreground="#FFFEFEFE" HorizontalAlignment="Center" Canvas.Right="1100"  Name="MessagePage"  VerticalAlignment="Top" ><TextBlock.Effect><DropShadowEffect BlurRadius="4" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+                </Canvas> 
+                <Grid Name="conteneur" >                    
+                </Grid>
+            </DockPanel>
+        </Grid>        
+        <Grid Height="548" HorizontalAlignment="Left" Margin="540,1180,0,0" Name="gridLogin" VerticalAlignment="Top" Width="898" Grid.Column="1" Opacity="1" />
+        <Grid Height="548" HorizontalAlignment="Left" Margin="540,1180,0,0" Name="gridCreationLogin" VerticalAlignment="Top" Width="898" Grid.Column="1" />
+        <Image Height="50" HorizontalAlignment="Left" Margin="6,6,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/SurfaceApplicationMaurice;component/Images/Koala.jpg" Opacity="1" Grid.Column="1" MouseDown="image1_MouseDown" />       
+    </Grid >
+</s:SurfaceWindow>

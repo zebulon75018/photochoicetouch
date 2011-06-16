@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.FormatDialogImage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:r="clr-namespace:SurfaceApplicationMaurice"
+             d:DesignHeight="1263" d:DesignWidth="1133" xmlns:my="http://schemas.microsoft.com/surface/2008" Foreground="#FFE2873A">
+    <Grid Height="898" Width="1055" Name="gridBackground">
+        <my:SurfaceRadioButton Content="15x23" Height="16" HorizontalAlignment="Left" Margin="67,117,0,0" Name="surfaceRadioButton1" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Checked="surfaceRadioButton1_Checked" />
+        <my:SurfaceRadioButton Content="20x30" Height="16" HorizontalAlignment="Left" Margin="320,117,0,0" Name="surfaceRadioButton2" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Checked="surfaceRadioButton2_Checked" />
+        <my:SurfaceRadioButton Content="30x45" Height="16" HorizontalAlignment="Left" Margin="566,117,0,0" Name="surfaceRadioButton3" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Checked="surfaceRadioButton3_Checked" />        
+        <Button Content="Ok" Height="46" HorizontalAlignment="Left" Margin="102,821,0,0" Name="buttonOk" VerticalAlignment="Top" Width="230" FontSize="20" FontWeight="Bold" Click="buttonOk_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="#67FFFFFF" Offset="0" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="{Loc Reset}" Height="46" HorizontalAlignment="Right" Margin="0,821,57,0" Name="buttonReset" VerticalAlignment="Top" Width="230" FontSize="20" FontWeight="Bold" Foreground="#FFD40000" Click="buttonReset_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="#67FFFFFF" Offset="0" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="{Loc ChooseFormatAndCD}" Height="53" HorizontalAlignment="Center"  Name="label1" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Width="693" />        
+        <TabControl Height="679" HorizontalAlignment="Left" Margin="12,45,0,0" Name="tabControlProduct" VerticalAlignment="Top" Width="1032" Background="White" SelectionChanged="tabControlProduct_SelectionChanged">
+            <TabItem Header="{Loc Format}" Name="tabItem1" FontSize="18" FontWeight="Bold">
+                    <Grid  HorizontalAlignment="Stretch"  Name="stackPanelFormatPhoto" VerticalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <TabItem.BorderBrush>
+                    <ImageBrush />
+                </TabItem.BorderBrush>
+            </TabItem>
+            <TabItem Header="{Loc Objet}" Name="tabItem2" FontSize="18" FontWeight="Bold">               
+                    <Grid HorizontalAlignment="Stretch"  Name="stackPanelProductObject"  VerticalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Loc OrderOnCD}" Name="tabItem3" FontSize="18" FontWeight="Bold">
+                <Grid Name="grdiOderImageOnCD">
+                    <my:SurfaceCheckBox Content="{Loc OrderPictureCD}" Height="16" HorizontalAlignment="Left" Margin="380,80,0,0" Name="surfaceCheckBoxOrderCD2" VerticalAlignment="Top" Width="326" FontSize="20" FontWeight="Bold"  TouchUp="surfaceCheckBoxOrderCD_TouchUp" Unchecked="surfaceCheckBoxOrderCD2_Unchecked" Checked="surfaceCheckBoxOrderCD2_Checked_1" />
+                    <Label Content="{Loc MinimumPhotoOnCD}" FontSize="20" FontWeight="Bold" Foreground="#FF961515" Height="42" HorizontalAlignment="Left" Margin="275,25,0,0" Name="labelWarningMinimun" VerticalAlignment="Top" Visibility="Hidden" Width="466" />
+                    <Image Height="204" HorizontalAlignment="Left" Margin="392,150,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="254" Source="/SurfaceApplicationMaurice;component/Images/cdrom-icon.png" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Loc OnBook}" Name="tabItem4" FontSize="18" FontWeight="Bold">
+                <Grid Name="gridOnBook">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="420*" />
+                        <ColumnDefinition Width="602*" />
+                    </Grid.ColumnDefinitions>
+                    <my:SurfaceCheckBox Content="{Loc OnBook}" FontSize="20" FontWeight="Bold" Height="16" HorizontalAlignment="Left" Margin="395,73,0,0" Name="surfaceCheckBoxOnBook" VerticalAlignment="Top" Width="326" Grid.ColumnSpan="2" Unchecked="surfaceCheckBoxOnBook_Unchecked" Checked="surfaceCheckBoxOnBook_Checked" />
+                    <Label Content="{Loc MinimumPhotoOnBook}" FontSize="20" FontWeight="Bold" Foreground="#FF961515" Height="42" HorizontalAlignment="Left" Margin="194,25,0,0" Name="labelMinimunForBook" VerticalAlignment="Top" Visibility="Hidden" Width="643" Grid.ColumnSpan="2" />
+                    <Image Height="276" HorizontalAlignment="Left" Margin="312,159,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="409" Source="/SurfaceApplicationMaurice;component/Resources/a4pa_new_tab.jpg" Grid.ColumnSpan="2" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Content="{Loc Price}" Height="46" HorizontalAlignment="Left" Margin="58,730,0,0" Name="labelPrice" VerticalAlignment="Top" Width="216" FontSize="20" FontWeight="Bold" />
+        <Label Content="{Loc PricePromotional}" Height="46" HorizontalAlignment="Right" Margin="0,730,368,0" Name="labelPromo" VerticalAlignment="Top" Width="288" FontSize="20" FontWeight="Bold" Foreground="#FF820000" />
+        <Label Content="{Loc Reduction}" Height="46" HorizontalAlignment="Right" Margin="0,730,129,0" Name="labelPourcentage" VerticalAlignment="Top" Width="158" FontSize="20" FontWeight="Bold" Foreground="#FFE2873A" />
+        <Label Height="40" HorizontalAlignment="Left" Margin="93,764,0,0" Name="labelNormalPrice" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial" Width="115" Content="-----" />
+        <Label Height="53" HorizontalAlignment="Left" Margin="483,764,0,0" Name="labelPromotionPrice" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Foreground="#FF820000" Content="----" Width="161" />
+        <Label Height="58" HorizontalAlignment="Right" Margin="0,764,125,0" Name="labelReduction" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Content="-----" Width="118" Foreground="#FFE2873A" />
+        <Label Content="{Loc AreYouSure}" Height="43" HorizontalAlignment="Left" Margin="383,824,0,0" Name="labelAreyouSure" VerticalAlignment="Top" Width="371" FontSize="20" FontWeight="Bold" Visibility="Hidden" TouchDown="labelAreyouSure_TouchDown" MouseDown="labelAreyouSure_MouseDown" Foreground="Red" Background="#410000B2" />
+        <Label Content="Ok" Height="43" HorizontalAlignment="Left" Margin="383,824,0,0" Name="textBlockMessage" VerticalAlignment="Top" Width="100" FontSize="20" FontWeight="Bold" Visibility="Hidden" TouchDown="labelAreyouSure_TouchDown" MouseDown="labelAreyouSure_MouseDown" Foreground="Red" Background="#410000B2" />
+       
+    </Grid>
+</UserControl>

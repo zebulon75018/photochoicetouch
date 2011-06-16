@@ -1,0 +1,45 @@
+﻿<Window x:Class="DateSelectorUsageExamples.WindowMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrl="clr-namespace:Vodnev.Controls;assembly=Vodnev.Controls.DateSelector"
+    Title="DateSelector Demo Application" Height="400" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="DateSelector instance" Margin="3" Padding="5">
+            <ctrl:DateSelector Width="380" MaximumYear="2000" MinimumYear="2010" SelectedDateChanged="dateSelector_SelectedDateChanged" TextBlock.FontSize="20" Name="dateSelector" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Properties" Margin="3" Padding="3" HorizontalContentAlignment="Left">
+            <UniformGrid Columns="2" Rows="6">
+                <TextBlock Text="SelectedDate (SelectedDateChanged event)" VerticalAlignment="Center" Margin="3"/>
+                <TextBlock Name="txtSelectedDate" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3"/>
+
+                <TextBlock Text="ControlStyle" VerticalAlignment="Center" Margin="3"/>
+                <ComboBox Name="cbThemeSelector" Width="200" VerticalAlignment="Center" Margin="3">
+                    <ComboBoxItem>Default</ComboBoxItem>
+                    <ComboBoxItem>Touchscreen</ComboBoxItem>
+                    <ComboBoxItem>TouchscreenYearOnly</ComboBoxItem>
+                </ComboBox>
+                
+                <TextBlock Text="LocaleName" VerticalAlignment="Center" Margin="3"/>
+                <ComboBox Name="cbLocaleName" Width="200" VerticalAlignment="Center" Margin="3">
+                    <ComboBoxItem>en-US</ComboBoxItem>
+                    <ComboBoxItem>ru-RU</ComboBoxItem>
+                    <ComboBoxItem>it-IT</ComboBoxItem>
+                    <ComboBoxItem>fr-FR</ComboBoxItem>
+                </ComboBox>        
+                
+                <TextBlock Text="MinimumYear" VerticalAlignment="Center" Margin="3"/>
+                <ComboBox Name="comboBoxMinimumYear" Width="200" VerticalAlignment="Center" Margin="3"/>
+
+                <TextBlock Text="MaximumYear" VerticalAlignment="Center" Margin="3"/>
+                <ComboBox Name="comboBoxMaximumYear" Width="200" VerticalAlignment="Center" Margin="3"/>
+                
+                <TextBlock Text="Custom Template" VerticalAlignment="Center" Margin="3"/>
+                <CheckBox Name="checkBoxApplyCustomTemplate" Content="Apply &quot;DateSelectorCustomTemplate&quot;" IsChecked="False" HorizontalAlignment="Center" VerticalAlignment="Center" Click="checkBoxApplyCustomTemplate_Click" Margin="3"/>
+            </UniformGrid>
+        </GroupBox>
+    </Grid>
+</Window>

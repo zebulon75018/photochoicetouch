@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DateSelector">
+</Property><Property Name="Solution File" Value="C:\dev\CSharp\DateSelector\DateSelector.sln">
+</Property><Property Name="User Options File" Value="C:\dev\CSharp\DateSelector\DateSelector.suo">
+</Property><Property Name="Date" Value="lundi 22 novembre 2010">
+</Property><Property Name="Time" Value="06:20">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DateSelector.sln" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DateSelector.suo" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector.suo">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\DateSelector.csproj" Description="Project file successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\DateSelector.csproj">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\DateSelector.csproj.user" Description="Project user file successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\DateSelector.csproj.user">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\DateSelector.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\DateSelector.cs">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\Properties\Settings.settings" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\Properties\Resources.resx" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelector\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\DateSelector.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DateSelector" Source="DateSelector\DateSelector.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\DateSelectorUsageExample.csproj" Description="Project file successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\DateSelectorUsageExample.csproj">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\App.xaml.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\App.xaml.cs">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\WindowMain.xaml.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\WindowMain.xaml.cs">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Properties\Settings.settings" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Properties\Resources.resx" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\App.xaml" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\App.xaml">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\DateSelectorCustomTemplateDictionary.xaml" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\DateSelectorCustomTemplateDictionary.xaml">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\Resources\DateSelector.xaml" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\Resources\DateSelector.xaml">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\WindowMain.xaml" Description="File successfully backed up as C:\dev\CSharp\DateSelector\Backup\DateSelectorUsageExamples\WindowMain.xaml">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\DateSelectorUsageExample.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\DateSelectorUsageExample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DateSelector.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DateSelector.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DateSelector" Source="DateSelector\DateSelector.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="DateSelectorUsageExample" Source="DateSelectorUsageExamples\DateSelectorUsageExample.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
