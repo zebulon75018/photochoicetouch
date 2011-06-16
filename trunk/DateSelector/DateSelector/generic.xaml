@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Vodnev.Controls;assembly=Vodnev.Controls.DateSelector" >
+    <ControlTemplate TargetType="{x:Type local:DateSelector}" x:Key="Default">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox Name="PART_Day" SelectedIndex="0" Margin="1" Grid.Column="0"/>
+            <ComboBox Name="PART_Month" SelectedItem="0" Margin="1" Grid.Column="1"/>
+            <ComboBox Name="PART_Year" Margin="1" Grid.Column="2"/>
+        </Grid>
+    </ControlTemplate>
+    <Style TargetType="{x:Type local:DateSelector}">
+        <Setter Property="Template" Value="{StaticResource Default}" />
+    </Style>
+</ResourceDictionary>

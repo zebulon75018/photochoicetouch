@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.PhotoSelectionPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+           xmlns:s="http://schemas.microsoft.com/surface/2008" 
+               xmlns:wait="clr-namespace:WaitingAnimated"
+             xmlns:myitem="clr-namespace:SurfaceApplicationMaurice"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid Name="gridBackground">
+        <Label Name="TotalPriceLabel" Content="TOTAL" ></Label>
+            <DockPanel HorizontalAlignment="Stretch"  Name="dockPanel1" VerticalAlignment="Stretch"  >
+        <DockPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1" />
+                <GradientStop Color="#FF707070" Offset="0" />
+            </LinearGradientBrush>
+        </DockPanel.Background>
+            <s:SurfaceListBox HorizontalAlignment="Left" Name="surfaceListBox1" VerticalAlignment="Stretch" Width="900" SelectionChanged="surfaceListBox1_SelectionChanged" AllowDrop="True" Background="#00000000" DockPanel.Dock="Left" Margin="0"></s:SurfaceListBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="190" DockPanel.Dock="Top">
+                <Rectangle Height="87" Name="rectangleSpace"  Width="10" />
+                <Grid Name="PriceGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />                        
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="{Loc NumberImage}" FontSize="14" FontWeight="Bold" />
+                    <Label Grid.Row="1" Grid.Column="0" Content="{Loc FormatPhotoToPrint}"  FontSize="14" FontWeight="Bold" />
+                    <Label Grid.Row="3" Grid.Column="0" Content="{Loc PhotoOnCD}"  FontSize="14" FontWeight="Bold" />                    
+                    <Label Grid.Row="2" Grid.Column="0" Content="{Loc PhotoOnOjbet}"  FontSize="14" FontWeight="Bold"/>
+                    <Label Grid.Row="4" Grid.Column="0" Content="{Loc PhotoOnBook}"  FontSize="14" FontWeight="Bold"/>
+                    <Label Name="LabelPromotionalPrice" Grid.Row="5" Grid.Column="0" Content="{Loc PricePromotional}"  FontSize="16" FontWeight="Bold" Visibility="Hidden" Foreground="#FFE17D00" />                    
+                    <Label  Name="LabelPrice" Content="{Loc Price}" Grid.Column="3" Grid.Row="5" FontSize="16" FontWeight="Bold"  Foreground="#FFE17D00" />
+                    <Label  Name="numberOfTotalPhoto" Content=""  Grid.Column="1" Grid.Row="0" FontSize="14" FontWeight="Bold" />
+                    <Label  Name="numberOfPrintPhoto"  Content="" Grid.Column="1" Grid.Row="1"  FontSize="14" FontWeight="Bold" />
+                    <Label  Name="numberOfPhotoOnCd"  Content=""  Grid.Column="1" Grid.Row="3"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="numberOfPhotoOnObjet"  Content=""  Grid.Column="1" Grid.Row="2"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="numberOfPhotoOnBook"  Content=""  Grid.Column="1" Grid.Row="4"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="TotalPricePhoto"  Content="" Grid.Column="4" Grid.Row="1"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="TotalPricePhotoObject"  Content="" Grid.Column="4" Grid.Row="2"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="TotalPricePictureCD"  Content="" Grid.Column="4" Grid.Row="3"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="TotalPricePictureBook"  Content="" Grid.Column="4" Grid.Row="4"  FontSize="14" FontWeight="Bold"/>
+                    <Label  Name="PromotionatinalPrice" Grid.Column="1" Grid.Row="5"  FontSize="18" FontWeight="Bold" Visibility="Hidden" Foreground="#FFE17D00" />
+                    <Label  Name="TotalPrice" Content="" Grid.Column="4" Grid.Row="5" FontSize="18" FontWeight="Bold" Foreground="#FFE17D00" />
+
+                </Grid>                
+                <Rectangle Width="100"></Rectangle>
+                <StackPanel Name="imageFormatPanel" Visibility="Hidden">
+                    <Rectangle Height="25" Name="rectanglePoubelle"  Width="10" />
+                    <Image Height="90" Name="imagePoubelle" Stretch="Fill" Width="90" Source="/SurfaceApplicationMaurice;component/Images/corbeille.png" TouchUp="image1_TouchUp" />
+                    <StackPanel Height="3" Name="stackPanelQuestionDelete" HorizontalAlignment="Stretch" Orientation="Vertical" Visibility="Visible">
+                        <Label Content="{Loc Deleteimage}" FontSize="18" FontWeight="Bold" ></Label>
+                        <StackPanel Height="50" Orientation="Horizontal">
+                        <Button Content="{Loc Yes}" Name="buttonDeleteImage" Click="buttonDeleteImage_Click" FontSize="18" FontWeight="Bold" Width="50"/>
+                        <Rectangle Height="30" Name="rectangle2"  Width="10" />
+                            <Button Content="{Loc Cancel}" Name="buttonCancelDelete" Click="buttonCancelDelete_Click" FontSize="18" FontWeight="Bold" Width="100"/>
+                        </StackPanel>
+                    </StackPanel>                                        
+            </StackPanel >
+                </StackPanel>
+            <StackPanel Height="280" Name="stackPanel1" HorizontalAlignment="Stretch"  DockPanel.Dock="Bottom" Orientation="Horizontal" Visibility="Hidden" Opacity="1">                
+                    <Rectangle Height="87" Name="rectangle4"  Width="5" />
+                <Image Height="130" Name="imageCD" Stretch="Fill" Width="220" MouseUp="imageCD_MouseUp" TouchUp="imageCD_TouchUp" Source="/SurfaceApplicationMaurice;component/Images/boutoncd%20%281%29.png" />
+                <Rectangle Height="87" Name="rectangle5"  Width="5" />
+                <Image Height="130" Name="imageSepia" Stretch="Fill" Width="280" TouchUp="imageSepia_TouchUp" MouseUp="imageSepia_MouseUp" Source="/SurfaceApplicationMaurice;component/Images/bouton%20sepia%20%281%29.png" />
+                <Rectangle Height="87" Name="rectangle6"  Width="5" />
+                <Image Height="129" Name="imageFormat" Source="/SurfaceApplicationMaurice;component/Resources/boutonformat.png" Stretch="Fill" Width="133" MouseUp="imageFormat_MouseUp" TouchUp="imageFormat_TouchUp" HorizontalAlignment="Center"  />
+                <Rectangle Height="87" Name="rectangle7"  Width="5" />                
+                <Image Height="117" Name="imageGoodie" Stretch="Fill" Width="134"  Source="/SurfaceApplicationMaurice;component/Images/boutonmug1.png" TouchUp="imageGoodie_TouchUp" MouseUp="imageGoodie_MouseUp" />
+                <Rectangle Height="87" Name="rectangle8"  Width="5" />
+                <Image Height="123" Name="imageLivreFormat" Stretch="Fill" Width="143"  Source="/SurfaceApplicationMaurice;component/Images/boutonlivre.png" TouchUp="imageLivreFormat_TouchUp" MouseUp="imageLivreFormat_MouseUp" />
+            </StackPanel>            
+        <s:ScatterView  HorizontalAlignment="Left" Margin="250,0,0,0" Name="scatterView1" VerticalAlignment="Top"  Grid.Column="1">
+            <s:ScatterViewItem CanRotate="False" CanMove="true" Center="360,320" Visibility="Collapsed" Name="scatterViewItem" MinWidth="300" Background="#27000000">
+                    <myitem:MyImage Stretch="Uniform" x:Name="imgScatter">
+                        </myitem:MyImage>
+            </s:ScatterViewItem>
+        </s:ScatterView>                        
+    </DockPanel>
+    <Grid HorizontalAlignment="Stretch"  Name="gridWating" VerticalAlignment="Stretch" Visibility="Hidden" Opacity="1" Background="#0A000000">
+        <wait:FrontEndWaiting Height="145" Width="150" IsAnimated="False" x:Name="WaitingAnimation" Visibility="Visible" ></wait:FrontEndWaiting>
+            <Label Content="{Loc Loading}" VerticalAlignment="Center" HorizontalAlignment="Center" Name="chargementLabel" FontSize="32"  FontWeight="Bold" />
+            
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="450,1000,0,0" Name="gridEffect" VerticalAlignment="Top" Height="887" Width="1196" />
+    </Grid>
+</UserControl>

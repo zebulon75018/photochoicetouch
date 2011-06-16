@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2EFD196-6AE4-42E2-B3E2-A3ED98C21E5A}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>SurfaceApplicationMaurice</RootNamespace>
+    <AssemblyName>SurfaceApplicationMaurice</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>Publish\</PublishUrl>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vodnev.Controls.DateSelector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dev\CSharp\DateSelector\DateSelector\bin\Debug\Vodnev.Controls.DateSelector.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Surface.Presentation" />
+    <Reference Include="Microsoft.Surface.Presentation.Generic" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ButtonMenu.xaml.cs">
+      <DependentUpon>ButtonMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="communConfig.cs" />
+    <Compile Include="DispatcherHelper.cs" />
+    <Compile Include="GifAnimatedImage.cs" />
+    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="ImageThumbs.xaml.cs">
+      <DependentUpon>ImageThumbs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageListener.cs" />
+    <Compile Include="MyImage.cs" />
+    <Compile Include="NetWork\DownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetWork\DownloadDialog.Designer.cs">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWork\LicenceQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetWork\LicenceQuery.Designer.cs">
+      <DependentUpon>LicenceQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWork\VersionChecker.cs" />
+    <Compile Include="productConfig.cs" />
+    <Compile Include="Splasher.cs" />
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\BookPhotoOrder.xaml.cs">
+      <DependentUpon>BookPhotoOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\EffectPage.xaml.cs">
+      <DependentUpon>EffectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\FormatDialogImage.xaml.cs">
+      <DependentUpon>FormatDialogImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\orderImageOnCd.xaml.cs">
+      <DependentUpon>orderImageOnCd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\ProductWidget.xaml.cs">
+      <DependentUpon>ProductWidget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserImgSelected.cs" />
+    <Compile Include="Utility\BitmapUtil.cs" />
+    <Compile Include="Utility\EffectBitmap.cs" />
+    <Compile Include="Utility\FileScanner.cs" />
+    <Compile Include="Utility\gradientManager.cs" />
+    <Compile Include="Utility\ModifyRegistry.cs" />
+    <Compile Include="Utility\ScreenSaverController.cs" />
+    <Compile Include="Utility\TransformationUtil.cs" />
+    <Compile Include="XMLTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoriesXml.cs" />
+    <Compile Include="FrontEndWaiting.xaml.cs">
+      <DependentUpon>FrontEndWaiting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="globalDatasingleton.cs" />
+    <Compile Include="ItemListCategory.xaml.cs">
+      <DependentUpon>ItemListCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControler.cs" />
+    <Compile Include="LoginManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NetWork\DownloadDialog.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWork\LicenceQuery.resx">
+      <DependentUpon>LicenceQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionUser.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SubPages\BrowserPage.xaml.cs">
+      <DependentUpon>BrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\CreationLoginPage.xaml.cs">
+      <DependentUpon>CreationLoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\InformationCategory.xaml.cs">
+      <DependentUpon>InformationCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\LanguagePage.xaml.cs">
+      <DependentUpon>LanguagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\ListCategoryPhotoPage.xaml.cs">
+      <DependentUpon>ListCategoryPhotoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\ListPhotosPage.xaml.cs">
+      <DependentUpon>ListPhotosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\MeteoPage.xaml.cs">
+      <DependentUpon>MeteoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\onePhotoPage.xaml.cs">
+      <DependentUpon>onePhotoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\PhotoSelectionPage.xaml.cs">
+      <DependentUpon>PhotoSelectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\NumKeys.xaml.cs">
+      <DependentUpon>NumKeys.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SurfaceWindow1.xaml.cs">
+      <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PORTECLE.jpg" />
+    <Resource Include="Resources\italien.png" />
+    <Resource Include="Resources\IMGgoodies_beach_bag.jpg" />
+    <Resource Include="Resources\IMGgoodies_mousepad_round.jpg" />
+    <Resource Include="Resources\IMGgoodies_mug.jpg" />
+    <Resource Include="Resources\IMGgoodies_mug_xxl.jpg" />
+    <Resource Include="Resources\IMGgoodies_school_bag.jpg" />
+    <Resource Include="Resources\IMGgoodies_t-shirt_men_blue.jpg" />
+    <Resource Include="Resources\IMGgoodies_t-shirt_women_white.jpg" />
+    <Resource Include="Resources\IMGgoodies_teddy_bear.jpg" />
+    <Resource Include="Resources\IMGgoodies_teddy_high.jpg" />
+    <Resource Include="Resources\italian.jpg" />
+    <Resource Include="Resources\news.jpg" />
+    <Resource Include="Resources\photo.jpg" />
+    <Resource Include="Images\Koala.jpg" />
+    <Resource Include="Images\appareil-photo-reflex-numerique-nikon.jpg" />
+    <Resource Include="Images\login_welcome.jpg" />
+    <Resource Include="Images\news.jpg" />
+    <Resource Include="Images\poubelle-icone.thumbnail.jpg" />
+    <Resource Include="Images\sepia-photo.jpg" />
+    <Resource Include="Resources\allemand.jpg" />
+    <Resource Include="Resources\anglais.gif" />
+    <Resource Include="Resources\drapeau.jpg" />
+    <Resource Include="Resources\espagnol.gif" />
+    <Resource Include="Resources\francais.jpg" />
+    <Resource Include="Images\previousgreen.png" />
+    <Resource Include="Images\next.png" />
+    <Resource Include="Images\previous1.png" />
+    <Resource Include="Images\next1.png" />
+    <Resource Include="Images\previous.png" />
+    <Resource Include="Images\silverman-harold-black-and-white-morning.jpg" />
+    <Resource Include="Images\06.png" />
+    <Resource Include="Images\cdrom-icon.png" />
+    <Resource Include="Images\320_HomeIcon.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\sans-titre.bmp" />
+    <Resource Include="Resources\30x30_new_tab.jpg" />
+    <Resource Include="Resources\a4pa_new_tab.jpg" />
+    <Resource Include="Resources\a4po_new_tab.jpg" />
+    <Resource Include="Resources\allemand.png" />
+    <Resource Include="Resources\anglais.png" />
+    <Resource Include="Resources\francais.png" />
+    <Resource Include="Images\espagne.png" />
+    <Resource Include="Images\panier.png" />
+    <Resource Include="Images\navigate_right_98517.jpg" />
+    <Resource Include="Images\navigate_right_98517.png" />
+    <Resource Include="Images\corbeille.png" />
+    <Resource Include="Images\bouton sepia %281%29.png" />
+    <Resource Include="Images\boutoncd %281%29.png" />
+    <Resource Include="Images\boutongris.png" />
+    <Resource Include="Images\goodies.png" />
+    <Resource Include="Images\photoformat.png" />
+    <Resource Include="Images\boutonmug.png" />
+    <Resource Include="Images\boutonmug1.png" />
+    <Resource Include="Resources\boutonformat.png" />
+    <Resource Include="Resources\boutonlivre.png" />
+    <Resource Include="Images\boutonlivre.png" />
+    <Resource Include="Images\russe %281%29.png" />
+    <Resource Include="Images\direction.png" />
+    <Resource Include="Resources\bebe.jpg" />
+    <Content Include="Resources\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\iconPreview.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="FrontEndWaiting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageThumbs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemListCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SubPages\BookPhotoOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\BrowserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\CreationLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\EffectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\FormatDialogImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\InformationCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\LanguagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\ListCategoryPhotoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\ListPhotosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\MeteoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\onePhotoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\orderImageOnCd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\PhotoSelectionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\NumKeys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPages\ProductWidget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SurfaceWindow1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ButtonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArteFactAnimator\Artefact\Artefact.csproj">
+      <Project>{58A3E1B0-FB2A-46CA-BECE-9DF3279A4CB1}</Project>
+      <Name>Artefact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFLocalization\WPFLocalization.csproj">
+      <Project>{447B98DC-3053-488B-8BB0-21BDC4F27456}</Project>
+      <Name>WPFLocalization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.0</PostBuildEvent>
+  </PropertyGroup>
+</Project>

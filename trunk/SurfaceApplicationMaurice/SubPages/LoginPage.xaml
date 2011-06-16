@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.LoginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:tp2="clr-namespace:SurfaceApplicationMaurice.SubPages"              
+             mc:Ignorable="d" 
+             d:DesignHeight="801" d:DesignWidth="930" xmlns:my="http://schemas.microsoft.com/surface/2008">  
+    <Grid Height="339" Width="727" Name="gridlogin">
+        <Button Content="{Loc Validate}" Height="71" HorizontalAlignment="Left" Margin="280,246,0,0" Name="buttonLogin" VerticalAlignment="Top" Width="211" Click="buttonLogin_Click" FontSize="20" FontWeight="Bold" />
+        <Button Content="{Loc Cancel}" Height="70" HorizontalAlignment="Left" Margin="25,247,0,0" Name="buttonCancel" VerticalAlignment="Top" Width="232" Click="button2_Click" FontSize="20" FontWeight="Bold" />
+        <Button Content="{Loc Createaccount}" Height="71" HorizontalAlignment="Left" Margin="513,246,0,0" Name="button3" VerticalAlignment="Top" Width="202" Click="button3_Click" FontSize="20" FontWeight="Bold" />
+        <PasswordBox Height="36" HorizontalAlignment="Left" Margin="300,160,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="321" GotFocus="passwordBox1_GotFocus" FontSize="24" FontWeight="Bold" TouchUp="passwordBox1_TouchUp">        
+        </PasswordBox>
+        <tp2:NumKeys Visibility="Hidden" Margin="553,160,-129,-223" x:Name="numkeyboard" Opacity="1" />
+        <TextBlock Height="57" HorizontalAlignment="Left" Margin="25,88,0,0" Name="textBlock1" Text="{Loc Chambernumber}" VerticalAlignment="Top" Width="252" FontSize="20" FontWeight="Bold" />
+        <TextBlock Height="45" HorizontalAlignment="Left" Margin="25,151,0,0" Name="textBlock2" Text="{Loc Password}" VerticalAlignment="Top" Width="252" FontSize="20" FontWeight="Bold" />
+        <TextBlock Height="39" HorizontalAlignment="Left" Margin="100,12,0,0" Name="textBlock3" Text="{Loc Pleaseenteryourlogin}" VerticalAlignment="Top" Width="649" FontSize="28" FontWeight="Bold" DataContext="{Binding}" />
+        <TextBox Height="42" HorizontalAlignment="Left" Margin="298,94,0,0" Name="textBoxLogin" VerticalAlignment="Top" Width="321" GotFocus="textBox1_GotFocus" FontSize="24" FontWeight="Bold" TextChanged="textBox1_TextChanged" TouchUp="textBox1_TouchUp" FontFamily="Verdana" />
+        <TextBlock Height="35" HorizontalAlignment="Left" Margin="168,204,0,0" Name="textBlockErrorLogin" Text="{Loc Errorlogin}" VerticalAlignment="Top" Width="388" FontSize="24" FontWeight="Bold" Visibility="Hidden" Foreground="Red" Background="#24696969" TextAlignment="Center" Opacity="0" />
+    </Grid>           
+</UserControl>

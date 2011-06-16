@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.onePhotoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:myitem="clr-namespace:SurfaceApplicationMaurice"
+             d:DesignHeight="800" d:DesignWidth="1800" xmlns:my="http://schemas.microsoft.com/surface/2008">
+    <Grid Name="gridPhoto">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1" />
+                <GradientStop Color="#00707070" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel  HorizontalAlignment="Stretch"  Name="dockPanel1" VerticalAlignment="Stretch">
+            <DockPanel  HorizontalAlignment="Stretch"  Name="dockPanelBottom" VerticalAlignment="Stretch" DockPanel.Dock="Bottom" Height="190">
+                <my:SurfaceButton  Name="surfaceButton1" VerticalAlignment="Stretch" Click="surfaceButton1_Click" FontSize="22" FontWeight="Bold" DockPanel.Dock="Left">
+                    <Image  HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="/SurfaceApplicationMaurice;component/Images/previous.png" Width="100" Height="100" />
+                    <my:SurfaceButton.BorderBrush>
+                        <ImageBrush />
+                    </my:SurfaceButton.BorderBrush>
+                </my:SurfaceButton>
+                <my:SurfaceButton  Name="surfaceButtonNext"  VerticalAlignment="Stretch" Click="surfaceButtonNext_Click" FontSize="20" FontWeight="Bold"  DockPanel.Dock="Right">
+                    <Image  HorizontalAlignment="Left" Name="image2" Stretch="Fill" VerticalAlignment="Top" Source="/SurfaceApplicationMaurice;component/Images/next1.png" Width="100" Height="100" />
+                </my:SurfaceButton>
+
+                <Border BorderBrush="#00C0C0C0" BorderThickness="1" Height="120" HorizontalAlignment="Left" Name="borderSelection" VerticalAlignment="Top"   >
+                    <StackPanel  HorizontalAlignment="Stretch"  Name="stackPanelSelection" VerticalAlignment="Stretch" DockPanel.Dock="Bottom"  Orientation="Horizontal" ZIndex="10">                        
+                        <my:SurfaceButton Content="{Loc Addtoyourselection}"  Name="surfaceButtonAddToSelection"  VerticalAlignment="Stretch" Click="surfaceButtonAddToSelection_Click"   FontSize="24" FontWeight="Bold" Foreground="#FFDDDDDD" Width="400"></my:SurfaceButton>
+                        <Rectangle Width="900"></Rectangle>
+                        <my:SurfaceButton Content="{Loc Addtoyourselection}"  Name="surfaceButtonAddToSelection2"  VerticalAlignment="Stretch" Click="surfaceButtonAddToSelection_Click"   FontSize="24" FontWeight="Bold" Foreground="#FFDDDDDD" Width="400"></my:SurfaceButton>
+                    </StackPanel>
+                </Border>                
+            </DockPanel> 
+            <Grid>
+                
+                <my:ScatterView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="scatterView1">                    
+                        <my:ScatterViewItem CanRotate="False" CanMove="true"  Center="800,450" Name="scatterView" Width="800" Height="800" ZIndex="0" >
+                        <myitem:MyImage Stretch="Uniform" x:Name="imgScatter" >
+                            </myitem:MyImage>
+                            
+            </my:ScatterViewItem>                    
+                </my:ScatterView>
+                <TextBlock Height="63" HorizontalAlignment="Left"  Name="textBlockMessage" Text="TextBlock" VerticalAlignment="Bottom" Width="700" FontSize="32" FontWeight="Bold" Visibility="Hidden" Background="#502A2941" Margin="3" />
+            </Grid>
+        </DockPanel>      
+    </Grid>
+</UserControl>

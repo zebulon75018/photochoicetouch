@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.LanguagePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:r="clr-namespace:SurfaceApplicationMaurice"
+             mc:Ignorable="d" 
+             d:DesignHeight="1260" d:DesignWidth="1576">
+    <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="1520" Height="880" Name="gridBackground">
+        <Viewbox Height="425" HorizontalAlignment="Left"  Name="viewbox1" VerticalAlignment="Top" Width="430"  Margin="75,150,0,0" TouchEnter="viewbox1_TouchEnter" TouchLeave="viewbox1_TouchLeave">
+            <r:ButtonMenu  VerticalAlignment="Bottom" x:Name="EnglishButton" HorizontalAlignment="Left" TouchUp="EnglishButton_TouchUp" r:Width="400" r:Height="300" />
+        </Viewbox>
+         <Viewbox Height="425" HorizontalAlignment="Left"  Name="viewbox2" VerticalAlignment="Top" Width="430"  Margin="511,151,0,0" TouchEnter="viewbox1_TouchEnter" TouchLeave="viewbox1_TouchLeave">
+        <r:ButtonMenu  x:Name="FrenchButton" TouchUp="FrenchButton_TouchUp" r:Width="400" r:Height="300"/>
+        </Viewbox>
+        <Viewbox Height="425" HorizontalAlignment="Left"  Name="viewbox3" VerticalAlignment="Top" Width="430"  Margin="968,150,0,0" TouchEnter="viewbox1_TouchEnter" TouchLeave="viewbox1_TouchLeave">
+            <r:ButtonMenu  x:Name="ItalianButton" TouchUp="ItalianButton_TouchUp" r:Width="400" r:Height="300" />
+        </Viewbox>
+        <Viewbox Height="425" HorizontalAlignment="Left"  Name="viewbox4" VerticalAlignment="Top" Width="430"  Margin="320,520,0,0" TouchEnter="viewbox1_TouchEnter" TouchLeave="viewbox1_TouchLeave">
+            <r:ButtonMenu   x:Name="DeutchButton" TouchUp="DeutchButton_TouchUp"  r:Width="400" r:Height="300" />
+        </Viewbox>
+        <Viewbox Height="425" HorizontalAlignment="Left"  Name="viewbox5" VerticalAlignment="Top" Width="430"  Margin="770,520,0,0" TouchEnter="viewbox1_TouchEnter" TouchLeave="viewbox1_TouchLeave" OpacityMask="Black">
+            <r:ButtonMenu  x:Name="SpanishButton" TouchUp="SpanishButton_TouchUp"  r:Width="400" r:Height="300" />
+        </Viewbox>       
+    </Grid>
+</UserControl>

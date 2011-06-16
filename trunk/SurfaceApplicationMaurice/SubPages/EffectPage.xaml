@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.EffectPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1200">
+    <Grid Height="818" Width="1150" Name="gridEffect">      
+        <Image Height="500" HorizontalAlignment="Left" Margin="38,128,0,0" Name="imageBlackAndWhite" Stretch="Fill" VerticalAlignment="Top" Width="500" TouchUp="imageBlackAndWhite_TouchUp" />
+        <Image Height="500" HorizontalAlignment="Left" Margin="600,128,49,0" Name="imageSepia" Stretch="Fill" VerticalAlignment="Top" Width="500" TouchUp="imageSepia_TouchUp" />
+        <TextBlock Text="{Loc Blackandwhite}" Height="41" HorizontalAlignment="Left" Margin="38,81,0,0" Name="label1" VerticalAlignment="Top" Width="254" FontSize="20" FontWeight="Bold" />
+        <TextBlock Text="{Loc Sepia}" Height="41" HorizontalAlignment="Right" Margin="0,81,338,0" Name="label2" VerticalAlignment="Top" Width="212" FontSize="20" FontWeight="Bold" />
+        <TextBlock Text="{Loc Chooseyoureffect}" Height="45" HorizontalAlignment="Stretch" Margin="441,12,348,0" Name="lableTitle" VerticalAlignment="Top" Width="361" FontSize="26" FontWeight="Bold" />
+        <Button Content="{Loc Cancel}" Height="46" HorizontalAlignment="Left" Margin="502,760,0,0" Name="button1" VerticalAlignment="Top" Width="145" FontSize="20" FontWeight="Bold" Click="button1_Click" />
+        <Button Content="{Loc Doyourealywant}" Height="44" HorizontalAlignment="Left" Margin="74,638,0,0" Name="buttonBAWOK" VerticalAlignment="Top" Width="457" FontSize="20" FontWeight="Bold" Visibility="Hidden" Click="buttonBAWOK_Click" />
+        <Button Content="{Loc Doyourealywant}" FontSize="20" FontWeight="Bold" Height="44" HorizontalAlignment="Left" Margin="610,638,0,0" Name="buttonSepiaOK" VerticalAlignment="Top" Width="457" Visibility="Hidden" Click="buttonSepiaOK_Click" />
+        <StackPanel Height="43" HorizontalAlignment="Left" Margin="24,696,0,0" Name="stackPanelBWDeleteSource" VerticalAlignment="Top" Width="456" Orientation="Horizontal" Visibility="Hidden" Opacity="0">
+            <Label Content="{Loc DeleteImageSource}" Height="36" Name="labelBWDeleteSource" Foreground="#FFE61D1D" FontSize="20" FontWeight="Bold" />
+            <Button Content="{Loc Yes}" Height="36" Name="buttonBWDeleteOriginal" Width="106" FontSize="20" FontWeight="Bold" Click="buttonBAWOKDeleteOriginal_Click" />
+            <Button Content="{Loc No}" Height="35" Name="buttonBWDontDeleteORiginal" Width="102" FontSize="20" FontWeight="Bold" Click="buttonBWDontDeleteORiginal_Click" />
+        </StackPanel>
+        <StackPanel Height="43" HorizontalAlignment="Left" Margin="604,696,0,0" Name="stackPanelSepiaDeleteSource" VerticalAlignment="Top" Width="456" Orientation="Horizontal" Visibility="Hidden" Opacity="0">
+            <Label Content="{Loc DeleteImageSource}" Height="36" Name="labelSepiaDeleteSource" Foreground="#FFE61D1D" FontSize="20" FontWeight="Bold" />
+            <Button Content="{Loc Yes}" Height="36" Name="buttonSepiaDeleteOriginal" Width="106" FontSize="20" FontWeight="Bold" Click="buttonSepiaDeleteOriginalOK_Click" />
+            <Button Content="{Loc No}" Height="35" Name="buttonSepiaDontDeleteOriginal" Width="102" FontSize="20" FontWeight="Bold" Click="buttonSepiaDontDeleteOriginal_Click" />
+        </StackPanel>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1" />
+                <GradientStop Color="#BF707070" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</UserControl>

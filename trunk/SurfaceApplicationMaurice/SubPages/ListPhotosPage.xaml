@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="SurfaceApplicationMaurice.SubPages.ListPhotosPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wait="clr-namespace:WaitingAnimated"
+              xmlns:myitem="clr-namespace:SurfaceApplicationMaurice"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500" xmlns:my="http://schemas.microsoft.com/surface/2008">
+    <Grid Name="gridBackground">        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1" />
+                <GradientStop Color="#00707070" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DockPanel  HorizontalAlignment="Stretch"  Name="dockPanel1" VerticalAlignment="Stretch" >
+            <StackPanel HorizontalAlignment="Stretch"  Name="listChildCategory" VerticalAlignment="Bottom" Height="52" Orientation="Horizontal" DockPanel.Dock="Top">                
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Stretch"  Name="stackPanel1" VerticalAlignment="Bottom" Height="0" Orientation="Horizontal" DockPanel.Dock="Bottom" >                
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF77ADCE" Offset="0.967" />
+                        <GradientStop Color="White" Offset="0" />
+                    </LinearGradientBrush>
+                </StackPanel.Background>                               
+                <Button Content="&lt;&lt; Previous " Name="buttonPreviousSet"  FontSize="20" FontWeight="Bold" />
+                <Button Content="Next &gt;&gt;"  Name="buttonNextSet"  Click="buttonNextSet_Click" FontSize="20" FontWeight="Bold" Height="150" Width="119" />
+            </StackPanel>
+            <Grid DockPanel.Dock="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="gridListThumb" >                
+            <my:SurfaceListBox HorizontalAlignment="Stretch" Name="surfaceListBox1" VerticalAlignment="Stretch" SelectionChanged="surfaceListBox1_SelectionChanged" MouseDoubleClick="surfaceListBox1_MouseDoubleClick" Background="#00000000" IsTextSearchEnabled="False"  />
+                <Image Name="Arrow" Source="/SurfaceApplicationMaurice;component/Images/direction.png" Visibility="Hidden" Height="299" Width="255"></Image>
+            </Grid>
+            <DockPanel  DockPanel.Dock="Left" Name="gridPhoto" Width="1">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
+                    <Button Content="{Loc backToGallery}"   HorizontalAlignment="Right" Name="surfaceButtonBackTopGallery" FontSize="18" FontWeight="Bold" Width="300" VerticalAlignment="Top"  Click="surfaceButtonBackTopGallery_Click" Height="75"   Visibility="Hidden"/>
+                    <my:SurfaceButton  Name="surfaceButton1" VerticalAlignment="Stretch"  FontSize="22" FontWeight="Bold" DockPanel.Dock="Left" Click="surfaceButtonPrevious_Click">
+                        <Image  HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="/SurfaceApplicationMaurice;component/Images/previous.png" Width="80" Height="80" />
+                    </my:SurfaceButton>
+                    <TextBlock Height="63" HorizontalAlignment="Left"  Name="textBlockMessage" Text="TextBlock" VerticalAlignment="Bottom" Width="400" FontSize="20" FontWeight="Bold" Visibility="Hidden" Background="#502A2941" Margin="3" />
+                    <my:SurfaceButton  Name="surfaceButtonNext"  VerticalAlignment="Stretch" Click="surfaceButtonNext_Click" FontSize="20" FontWeight="Bold"  DockPanel.Dock="Right">
+                        <Image  HorizontalAlignment="Left" Name="image2" Stretch="Fill" VerticalAlignment="Top" Source="/SurfaceApplicationMaurice;component/Images/next1.png" Width="80" Height="80" />
+                    </my:SurfaceButton>                    
+                    <Button Content="{Loc Addtoyourselection}"   Name="surfaceButtonAddToSelection"  Click="surfaceButtonAddToSelection_Click"  HorizontalAlignment="Left"  FontSize="18" FontWeight="Bold"  Width="300" VerticalAlignment="Top"  Height="75" Visibility="Hidden"/>
+                </StackPanel>
+                <my:ScatterView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="scatterView1" Margin="100,80,0,0">
+                    <my:ScatterViewItem CanRotate="False" CanMove="true"  Center="400,350" Name="scatterView" Width="700" Height="700" ZIndex="0" Opacity="0">
+                        <myitem:MyImage Stretch="Uniform" x:Name="imgScatter" >
+                        </myitem:MyImage>
+                    </my:ScatterViewItem>
+                </my:ScatterView>                
+            </DockPanel>
+        </DockPanel>
+        <Grid HorizontalAlignment="Stretch"  Name="gridWating" VerticalAlignment="Stretch" Visibility="Hidden" Opacity="1" Background="#0A000000">
+            <wait:FrontEndWaiting Height="145" Width="150" IsAnimated="False" x:Name="WaitingAnimation" Visibility="Hidden" ></wait:FrontEndWaiting>
+            <Label Content="Label" VerticalAlignment="Center" HorizontalAlignment="Center" Name="chargementLabel" FontSize="32"  FontWeight="Bold" />            
+        </Grid>        
+    </Grid>
+</UserControl>
